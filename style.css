@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500;900&display=swap");
+
+:root {
+  --Paleblue: hsl(225, 100%, 94%);
+  --Brightblue: hsl(245, 75%, 52%);
+  --Verypaleblue: hsl(225, 100%, 98%);
+  --Desaturatedblue: hsl(224, 23%, 55%);
+  --Darkblue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Red hat display;
+}
+
+body {
+  background-color: var(--Paleblue);
+  max-width: 100%;
+  height: auto;
+}
+
+.container-card {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.img-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-card h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.text-card p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--Desaturatedblue);
+  text-align: center;
+  margin: 20px;
+}
+
+.price-card {
+  width: 80%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Verypaleblue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-card a {
+  color: var(--Brightblue);
+  font-weight: 500;
+}
+.price-card a:hover {
+  color: hsl(259, 75%, 52%);
+}
+
+.annual-plan {
+  margin-left: -50px;
+}
+.annual-plan p {
+  font-weight: 700;
+}
+
+.annual-plan span {
+  color: var(--Desaturatedblue);
+  font-weight: 500;
+}
+
+.wrapper button {
+  width: 80%;
+  padding: 10px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--Brightblue);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0px 10px 1px 5px var(--Verypaleblue);
+}
+
+.wrapper button:hover {
+  cursor: pointer;
+  background-color: hsl(259, 75%, 52%);
+}
+
+.wrapper .cancel {
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--Desaturatedblue);
+}
+.wrapper .cancel:hover {
+  color: var(--Darkblue);
+}
+
+@media screen and (max-width: 380px) {
+  .card {
+    width: 320px;
+  }
+  .container-card {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  .price-card {
+    width: 90%;
+  }
+  .annual-plan {
+    margin-left: 0;
+  }
+}
